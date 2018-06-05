@@ -1,0 +1,18 @@
+@font-face { font-family: 'OpenSans'; src: url('../fonts/OpenSans.ttf'); }
+@font-face { font-family: 'Calibri'; src: url('../fonts/Calibri.ttf'); }
+@font-face { font-family: 'Yekan'; src: url('../fonts/Yekan.woff'); }
+@font-face { font-family: 'Dinar'; src: url('../fonts/Dinar.ttf'); }
+@font-face { font-family: 'Yekanp'; src: url('../fonts/Yekanp.ttf'); }
+@font-face { font-family: 'Traf'; src: url('../fonts/Traf.ttf'); }
+@font-face { font-family: 'Koodak'; src: url('../fonts/Koodak.ttf');}
+@font-face { font-family: 'Entezar'; src: url('../fonts/Entezar.ttf'); }
+
+.dinar { font-family: 'Dinar' }
+.yekan { font-family: 'Yekan' }
+.calibri { font-family: 'Calibri' }
+.yekanp { font-family: 'Yekanp' }
+.traf { font-family: 'Traf' }
+.koodak { font-family: 'Koodak' }
+.entezar { font-family: 'Entezar' }
+.open-sans { font-family: 'OpenSans' }
+.iran-sans { font-family: IRANSans; }
