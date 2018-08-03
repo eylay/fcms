@@ -11,21 +11,11 @@
             @if ($header->mobile_visible)
                 <div class="hidden-xs hidden-sm col-md-5 text-right">
                     <div class="screen-box screen-slider">
-                        <div class="item">
-                            <img src="images/screen-1.jpg" alt="">
-                        </div>
-                        <div class="item">
-                            <img src="images/screen-2.jpg" alt="">
-                        </div>
-                        <div class="item">
-                            <img src="images/screen-3.jpg" alt="">
-                        </div>
-                        <div class="item">
-                            <img src="images/screen-4.jpg" alt="">
-                        </div>
-                        <div class="item">
-                            <img src="images/screen-5.jpg" alt="">
-                        </div>
+                        @foreach ($header->photos as $photo)
+                            <div class="item">
+                                <img src="{{$photo->path}}">
+                            </div>
+                        @endforeach
                     </div>
                 </div>
             @endif

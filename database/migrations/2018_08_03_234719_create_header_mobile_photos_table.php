@@ -15,6 +15,7 @@ class CreateHeaderMobilePhotosTable extends Migration
     {
         Schema::create('header_mobile_photos', function (Blueprint $table) {
             $table->increments('id');
+            $table->unsignedInteger('header_id')->default(1);
             $table->string('path');
             $table->timestamps();
         });
