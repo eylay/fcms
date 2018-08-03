@@ -2,9 +2,16 @@
 
 @section('content')
 
-    @include('partials.preloader')
+    @if ($header->preloader)
+        @include('partials.preloader')
+    @endif
+
     @include('partials.menu')
-    @include('partials.header')
+
+    @if ($header->visible)
+        @include('partials.header')
+    @endif
+
     @include('partials.features')
     @include('partials.services')
     @include('partials.special_features')
