@@ -1,3 +1,11 @@
+/* RTL Bootstrap Navbar */
+
+@media only screen and (min-width: 768px) {
+    .navbar-nav > li {
+        float: right;
+    }
+}
+
 /* Medium Layout: 1280px. */
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {}
