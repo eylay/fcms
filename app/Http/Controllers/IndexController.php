@@ -9,7 +9,7 @@ class IndexController extends Controller
 {
     public function main()
     {
-        $header = Header::first();
+        $header = Header::first() ?? new Header;
         return view('index',compact('header'));
     }
 }
