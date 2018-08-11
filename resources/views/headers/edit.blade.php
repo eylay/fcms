@@ -32,15 +32,15 @@
 
             <div class="col-md-6 my-3">
                 <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="customCheck1">
-                    <label class="custom-control-label" for="customCheck1"> اسلایدر موبایل را نمایش بده </label>
+                    <input type="checkbox" class="custom-control-input" id="mobile">
+                    <label class="custom-control-label" for="mobile"> اسلایدر موبایل را نمایش بده </label>
                 </div>
             </div>
 
             <div class="col-md-6 my-3">
                 <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="customCheck1">
-                    <label class="custom-control-label" for="customCheck1"> loading را نمایش بده </label>
+                    <input type="checkbox" class="custom-control-input" id="preloader">
+                    <label class="custom-control-label" for="preloader"> loading را نمایش بده </label>
                 </div>
             </div>
 
