@@ -20,9 +20,18 @@ class CreateHeadersTable extends Migration
             $table->string('btn_name')->nullable();
             $table->string('btn_link')->nullable();
             $table->string('bg_path')->nullable();
+            $table->boolean('visible')->default(1);
             $table->boolean('mobile_visible')->default(1);
+            $table->boolean('preloader')->default(1);
             $table->timestamps();
         });
+
+        \DB::table('headers')->insert([
+            'title' => 'عنوان هدر',
+            'description' => 'متنی برای توضیحات هدر',
+            'btn_name' => 'نام دکمه',
+            'btn_link' => '#',
+        ]);
     }
 
     /**
