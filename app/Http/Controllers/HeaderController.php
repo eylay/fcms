@@ -16,12 +16,12 @@ class HeaderController extends Controller
 
     public function edit(Header $header)
     {
-        //
+        return view('headers.edit',compact('header'));
     }
 
     public function update(Request $request, Header $header)
     {
-        //
+        dd('here');
     }
 
 }

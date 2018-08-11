@@ -1,6 +1,7 @@
 body {
     direction: rtl;
     font-family: 'Yekan','Dinar','OpenSans';
+    text-align: right;
 }
 
 .s-2x {

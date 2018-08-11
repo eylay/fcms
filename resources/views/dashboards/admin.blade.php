@@ -26,7 +26,7 @@
                 <span class="lead"> مدیریت هدر </span>
             </div>
             <div class="card-footer text-left">
-                <a href="#" class="text-decoration-none mx-1 text-success"> <i class="ti-pencil s-1-5x" title="ویرایش"></i> </a>
+                <a href="{{url('headers/1/edit')}}" class="text-decoration-none mx-1 text-success"> <i class="ti-pencil s-1-5x" title="ویرایش"></i> </a>
                 @if (true)
                     <a href="#" class="text-decoration-none mx-1 text-warning"> <i class="ti-na s-1-5x" title="عدم نمایش"></i> </a>
                 @else
