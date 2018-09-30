@@ -32,14 +32,16 @@
 
             <div class="col-md-6 my-3">
                 <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="mobile">
+                    <input type="hidden" name="mobile_visible" value="0">
+                    <input type="checkbox" value="1" @if($header->mobile_visible) checked @endif name="mobile_visible" class="custom-control-input" id="mobile">
                     <label class="custom-control-label" for="mobile"> اسلایدر موبایل را نمایش بده </label>
                 </div>
             </div>
 
             <div class="col-md-6 my-3">
                 <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="preloader">
+                    <input type="hidden" name="preloader" value="0">
+                    <input type="checkbox" value="1" @if($header->preloader) checked @endif name="preloader" class="custom-control-input" id="preloader">
                     <label class="custom-control-label" for="preloader"> loading را نمایش بده </label>
                 </div>
             </div>
