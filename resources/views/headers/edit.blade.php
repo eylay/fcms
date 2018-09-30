@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-
+    
     <form class="container" action="{{url("headers/$header->id")}}" method="post">
 
         @csrf

@@ -32,7 +32,7 @@ class HeaderController extends Controller
 
         $header->update($data);
 
-        return back();
+        return back()->withMessage('هدر با موفقیت ویرایش شد.');
     }
 
 }
