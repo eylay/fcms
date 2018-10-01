@@ -76,11 +76,11 @@ return [
     ],
     'max'                  => [
         'numeric' => 'The :attribute may not be greater than :max.',
-        'file'    => 'The :attribute may not be greater than :max kilobytes.',
+        'file'    => ':attribute آپلود شده باید ماکسیمم :max کیلوبایت باشد.',
         'string'  => 'The :attribute may not be greater than :max characters.',
         'array'   => 'The :attribute may not have more than :max items.',
     ],
-    'mimes'                => 'The :attribute must be a file of type: :values.',
+    'mimes'                => ':attribute آپلود شده باید یکی از فرمت های روبه رو را داشته باشد: :values.',
     'mimetypes'            => 'The :attribute must be a file of type: :values.',
     'min'                  => [
         'numeric' => 'The :attribute must be at least :min.',
@@ -146,6 +146,7 @@ return [
         'btn_name' => 'نام دکمه',
         'btn_link' => 'لینک دکمه',
         'description' => 'توضیحات',
+        'bg_path' => 'تصویر پس زمینه',
     ],
 
 ];

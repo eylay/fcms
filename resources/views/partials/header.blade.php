@@ -1,5 +1,5 @@
 <header class="header-area overlay full-height relative v-center" id="home-page"
-    style="background: #000000 url('{{$header->bg_path}}') no-repeat scroll center center / cover;">
+    style="background: #000000 url('{{asset($header->bg_path)}}') no-repeat scroll center center / cover;">
     <div class="absolute anlge-bg"></div>
     <div class="container">
         <div class="row v-center">

@@ -1,29 +1,33 @@
 @extends('layouts.app')
 
 @section('content')
-    
-    <form class="container" action="{{url("headers/$header->id")}}" method="post">
+
+    <form class="container" action="{{url("headers/$header->id")}}" method="post" enctype="multipart/form-data">
 
         @csrf
         {{ method_field('PUT') }}
 
         <div class="row">
 
-            <div class="col-md-4 my-2">
+            <div class="col-md-3 my-2">
                 <label for="title"> عنوان هدر </label>
                 <input type="text" name="title" id="title" value="{{$header->title}}" class="form-control">
             </div>
 
-            <div class="col-md-4 my-2">
+            <div class="col-md-3 my-2">
                 <label for="btn-name"> نام دکمه </label>
                 <input type="text" name="btn_name" id="btn-name" value="{{$header->btn_name}}" class="form-control">
             </div>
 
-            <div class="col-md-4 my-2">
+            <div class="col-md-3 my-2">
                 <label for="btn-link"> لینک دکمه </label>
                 <input type="text" name="btn_link" id="btn-link" value="{{$header->btn_link}}" class="form-control">
             </div>
 
+            <div class="col-md-3 my-2">
+                <label for="background"> تصویر پس زمینه </label>
+                <input type="file" name="bg_path" id="background" class="form-control">
+            </div>
 
             <div class="col-md-12 my-2">
                 <label for="description"> متن هدر </label>

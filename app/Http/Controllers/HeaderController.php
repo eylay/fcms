@@ -28,7 +28,20 @@ class HeaderController extends Controller
             'description' => 'nullable|string|max:1000',
             'mobile_visible' => 'nullable|boolean',
             'preloader' => 'nullable|boolean',
+            'bg_path' => 'nullable|mimes:jpeg,png,bmp,tiff|max:2000',
         ]);
+
+        if ($photo = $request->bg_path) {
+
+            if (file_exists($header->bg_path)) {
+                \File::delete($header->bg_path);
+            }
+
+            $relarive_path = "storage/app/public";
+            $file_name = rs() . '.' . $photo->getClientOriginalExtension();
+            $result = $photo->move(base_path($relarive_path),$file_name);
+            $data['bg_path'] = 'storage/' . $file_name;
+        }
 
         $header->update($data);
 
