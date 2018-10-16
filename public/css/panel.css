@@ -29,3 +29,7 @@ body {
 .custom-checkbox label:after, .custom-checkbox label:before {
     right : 0;
 }
+
+.delete-photo:hover {
+    text-decoration: none;
+}

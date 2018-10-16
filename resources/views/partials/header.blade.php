@@ -13,7 +13,7 @@
                     <div class="screen-box screen-slider">
                         @foreach ($header->photos as $photo)
                             <div class="item">
-                                <img src="{{$photo->path}}">
+                                <img src="{{$photo->path}}" alt="">
                             </div>
                         @endforeach
                     </div>

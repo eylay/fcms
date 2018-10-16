@@ -9,6 +9,8 @@
 
         <div class="row">
 
+            <h3 class="col-12 dinar text-info mb-4"> ویرایش هدر </h3>
+
             <div class="col-md-3 my-2">
                 <label for="title"> عنوان هدر </label>
                 <input type="text" name="title" id="title" value="{{$header->title}}" class="form-control">
@@ -51,15 +53,42 @@
             </div>
 
             <hr class="col-12">
+            <h3 class="col-12 dinar text-info mb-4"> عکس های اسلایدر </h3>
 
-            <div class="col-md-5"></div>
-            <div class="col-md-2">
+            @foreach ($header->photos as $photo)
+                <div class="col-md-3 my-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="{{asset($photo->path)}}" class="img-fluid">
+                        </div>
+                        <div class="card-footer text-center">
+                            <a href="javascript:void" class="delete-photo" data-photo-id="{{$photo->id}}">
+                                <i class="ti-trash text-danger s-2x"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+
+            <hr class="col-12">
+            <div class="col-md-3 mr-auto ml-auto my-2">
+                <label for="slider"> آپلود عکس جدید برای اسلایدر </label>
+                <input type="file" name="slider[]" id="slider" class="form-control" multiple>
+            </div>
+
+        </div>
+
+        <hr>
+        <div id="photos-to-be-deleted">
+            {{-- this div will be filled via jQuery --}}
+        </div>
+        <div class="row">
+            <div class="col-md-2 mr-auto ml-auto">
                 <button type="submit" class="btn btn-primary btn-block">
                     <i class="ti-check ml-1"></i>
                     تایید
                 </button>
             </div>
-
         </div>
 
     </form>
