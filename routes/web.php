@@ -6,6 +6,8 @@ Route::resource('footers','FooterController')->only(['edit','update']);
 
 Route::get('/','IndexController@main');
 Route::post('message','IndexController@store_message');
+Route::get('messages','MessageController@index');
+Route::get('messages/delete/{message}','MessageController@destroy');
 
 
 Auth::routes();
