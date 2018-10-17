@@ -21,3 +21,18 @@ function upload($new_file, $prev_file=null)
     $result = $new_file->move(base_path($relarive_path),$file_name);
     return 'storage/' . $file_name;
 }
+
+
+function translate_section_type($word)
+{
+    switch ($word) {
+        case 'features': return 'خدمات'; break;
+        case 'tabs': return 'مجموعه تب'; break;
+        case 'prices': return 'قیمت ها'; break;
+        case 'cards': return 'کارت ها'; break;
+        case 'faq': return 'پرسش و پاسخ'; break;
+        case 'clients': return 'مشتریان ما'; break;
+        case 'posts': return 'پست ها'; break;
+        default: return $word; break;
+    }
+}

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Header;
 use App\Footer;
 use App\Message;
+use App\Section;
 
 use Illuminate\Http\Request;
 
@@ -13,7 +14,8 @@ class IndexController extends Controller
     {
         $header = Header::first() ?? new Header;
         $footer = Footer::first() ?? new Footer;
-        return view('index',compact('header', 'footer'));
+        $sections = Section::orderBy('position')->get();
+        return view('index',compact('header', 'footer', 'sections'));
     }
 
     public function store_message(Request $request)

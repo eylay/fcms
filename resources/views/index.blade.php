@@ -12,14 +12,11 @@
         @include('partials.header')
     @endif
 
-    @include('partials.special_features')
-    @include('partials.services')
-    @include('partials.prices')
-    @include('partials.team')
-    @include('partials.testimonial')
-    @include('partials.faq')
-    @include('partials.clients')
-    @include('partials.blogs')
+    @foreach ($sections as $section)
+        @include("partials.$section->type")
+    @endforeach
+
+    {{-- @include('partials.testimonial') --}}
 
     @if ($footer->visible)
         @include('partials.footer')
