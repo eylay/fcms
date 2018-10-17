@@ -23,16 +23,25 @@ Ajax Contact Form
 
         // get the form data
         var formData = {
-            'name' : $('input[name="form-name"]').val(),
-            'email' : $('input[name="form-email"]').val(),
-            'subject' : $('input[name="form-subject"]').val(),
-            'message' : $('textarea[name="form-message"]').val()
+            'name' : $('input[name="name"]').val(),
+            'email' : $('input[name="email"]').val(),
+            'subject' : $('input[name="subject"]').val(),
+            'body' : $('textarea[name="body"]').val()
         };
 
+        console.log(formData);
+
+        var token = $('input[name="_token"]').val();
+
         // process the form
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': token
+            }
+        })
         $.ajax({
             type : 'POST',
-            url  : 'process.php',
+            url  : 'message',
             data : formData,
             dataType : 'json',
             encode : true
