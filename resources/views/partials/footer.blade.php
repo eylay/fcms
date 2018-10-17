@@ -5,8 +5,8 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-6 col-sm-offset-3 text-center">
                     <div class="page-title">
-                        <h2>عنوان فوتر</h2>
-                        <p> متن توضیحات فوتر متن توضیحات فوتر متن توضیحات فوتر متن توضیحات فوتر </p>
+                        <h2> {{$footer->title}} </h2>
+                        <p> {{$footer->description_1}} </p>
                     </div>
                 </div>
             </div>
@@ -17,15 +17,17 @@
                             <div class="side-icon">
                                 <img src="images/location-arrow.png" alt="">
                             </div>
-                            <p><strong>آدرس: </strong> Box 564, Disneyland <br />USA</p>
+                            <p><strong>آدرس: </strong> {{$footer->address}} </p>
                         </div>
                         <div class="side-icon-box">
                             <div class="side-icon">
                                 <img src="images/phone-arrow.png" alt="">
                             </div>
                             <p><strong>تلفن: </strong>
-                                <a href="callto:8801812726495">+8801812726495</a> <br />
-                                <a href="callto:8801687420471">+8801687420471</a>
+                                @foreach (explode(',', $footer->telephones) as $telephone)
+                                    <a href="callto:{{$telephone}}">{{$telephone}}</a>
+                                    <br>
+                                @endforeach
                             </p>
                         </div>
                         <div class="side-icon-box">
@@ -33,8 +35,10 @@
                                 <img src="images/mail-arrow.png" alt="">
                             </div>
                             <p><strong>ایمیل: </strong>
-                                <a href="mailto:youremail@example.com">youremail@example.com</a> <br />
-                                <a href="mailto:youremail@example.com">example@mail.com</a>
+                                @foreach (explode(',', $footer->emails) as $email)
+                                    <a href="mailto:{{$email}}">{{$email}}</a>
+                                    <br>
+                                @endforeach
                             </p>
                         </div>
                     </address>
@@ -58,16 +62,28 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-6 pull-right">
                     <ul class="social-menu text-right x-left">
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-google"></i></a></li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                        <li><a href="#"><i class="fa fa-telegram"></i></a></li>
+                        @if ($footer->facebook)
+                            <li><a href="https://facebook.com/{{$footer->facebook}}"><i class="fa fa-facebook"></i></a></li>
+                        @endif
+                        @if ($footer->twitter)
+                            <li><a href="https://twitter.com/{{$footer->twitter}}"><i class="fa fa-twitter"></i></a></li>
+                        @endif
+                        @if ($footer->google)
+                            <li><a href="https://plus.google.com/{{$footer->google}}"><i class="fa fa-google"></i></a></li>
+                        @endif
+                        @if ($footer->linkedin)
+                            <li><a href="https://linkedin.com/{{$footer->linkedin}}"><i class="fa fa-linkedin"></i></a></li>
+                        @endif
+                        @if ($footer->instagram)
+                            <li><a href="https://instagram.com/{{$footer->instagram}}"><i class="fa fa-instagram"></i></a></li>
+                        @endif
+                        @if ($footer->telegram)
+                            <li><a href="https://t.me/{{$footer->telegram}}"><i class="fa fa-telegram"></i></a></li>
+                        @endif
                     </ul>
                 </div>
                 <div class="col-xs-12 col-sm-6">
-                    <p> متن دوم فوتر  متن دوم فوتر  متن دوم فوتر  متن دوم فوتر  متن دوم فوتر  متن دوم فوتر </p>
+                    <p> {{$footer->description_2}} </p>
                 </div>
             </div>
         </div>
