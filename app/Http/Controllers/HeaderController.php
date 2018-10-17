@@ -14,7 +14,6 @@ class HeaderController extends Controller
         $this->middleware('admin');
     }
 
-
     public function edit(Header $header)
     {
         return view('headers.edit',compact('header'));

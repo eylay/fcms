@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <form class="container" action="{{url("headers/$header->id")}}" method="post" enctype="multipart/form-data">
+    <form action="{{url("headers/$header->id")}}" method="post" enctype="multipart/form-data">
 
         @csrf
         {{ method_field('PUT') }}

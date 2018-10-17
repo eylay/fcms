@@ -4,6 +4,10 @@ body {
     text-align: right;
 }
 
+.bg-white {
+    background-color: #fff;
+}
+
 .s-2x {
     font-size: 2em;
 }
