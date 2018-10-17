@@ -2,6 +2,10 @@
 
 @section('content')
 
+    <div class="text-left">
+        <a href="{{url("sections/create")}}" class="btn btn-primary"> <i class="fa fa-plus ml-1"></i> بخش جدید </a>
+    </div>
+
     <h2 class="dinar text-center text-primary"> نقشه سایت </h2>
     <hr>
 
