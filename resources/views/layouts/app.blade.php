@@ -28,6 +28,7 @@
             <div class="container">
                 @include('fragments.message')
                 @include('fragments.errors')
+                @include('fragments.are_you_sure')
             </div>
             <div class="container py-4 bg-white">
                 @yield('content')

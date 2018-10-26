@@ -8,11 +8,6 @@ use Illuminate\Http\Request;
 class SectionController extends Controller
 {
 
-    public function index()
-    {
-        //
-    }
-
     public function create()
     {
         $section_types = ['features', 'tabs', 'prices', 'cards', 'faq', 'clients', 'posts'];
@@ -27,11 +22,6 @@ class SectionController extends Controller
         $data = self::validation();
         Section::create($data);
         return redirect('home')->withMessage('بخش مورد نظر اضافه شد');
-    }
-
-    public function show(Section $section)
-    {
-        //
     }
 
     public function edit(Section $section)
@@ -50,7 +40,15 @@ class SectionController extends Controller
 
     public function destroy(Section $section)
     {
-        //
+        $section->delete();
+        return back()->withMessage('بخش مورد نظر حذف شد.');
+    }
+
+    public function visibility(Section $section)
+    {
+        $section->visible = !$section->visible;
+        $section->save();
+        return back()->withMessage('تغییرات مورد نظر اعمال شد');
     }
 
     public static function validation()

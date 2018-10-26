@@ -8,7 +8,8 @@ Route::get('/','IndexController@main');
 Route::post('message','IndexController@store_message');
 Route::get('messages','MessageController@index');
 Route::get('messages/delete/{message}','MessageController@destroy');
-Route::resource('sections', 'SectionController');
+Route::resource('sections', 'SectionController')->except(['index', 'show']);
+Route::get('sections/visibility/{section}', 'SectionController@visibility');
 
 
 Auth::routes();

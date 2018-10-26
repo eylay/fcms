@@ -14,7 +14,7 @@ class IndexController extends Controller
     {
         $header = Header::first() ?? new Header;
         $footer = Footer::first() ?? new Footer;
-        $sections = Section::orderBy('position')->get();
+        $sections = Section::where('visible', 1)->orderBy('position')->get();
         return view('index',compact('header', 'footer', 'sections'));
     }
 
