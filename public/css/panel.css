@@ -38,6 +38,11 @@ body {
     text-decoration: none;
 }
 
+
+#clone-box {
+    padding-bottom: 100px;
+}
+
 .add-row {
     position: fixed;
     padding: 15px 50px;

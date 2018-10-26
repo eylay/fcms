@@ -1,5 +1,7 @@
 $(document).ready(function () {
 
+
+    // deleting photos
     $('a.delete-photo').click(function () {
 
         var id = $(this).attr('data-photo-id');
@@ -9,6 +11,8 @@ $(document).ready(function () {
 
     });
 
+
+    // are you sure
     $('.danger-alert').click(function () {
         var target = $(this).attr('data-target');
         $('#are-you-sure #yes').attr('data-target', target);
@@ -23,6 +27,13 @@ $(document).ready(function () {
         var id = $(this).attr('data-target');
         var form = $('#'+id);
         form.submit();
+    });
+
+
+    // clone action
+    $('#cloner').click(function () {
+        var row = $('.clone-row').first();
+        row.clone().appendTo('#clone-box');
     });
 
 });
