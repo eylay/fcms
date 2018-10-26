@@ -3,34 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Content;
+use App\Section;
 use Illuminate\Http\Request;
 
 class ContentController extends Controller
 {
 
-    public function index()
+    public function edit(Section $section)
     {
-        //
-    }
-
-    public function create()
-    {
-        //
-    }
-
-    public function store(Request $request)
-    {
-        //
-    }
-
-    public function show(Content $content)
-    {
-        //
-    }
-
-    public function edit(Content $content)
-    {
-        //
+        return view('contents.edit', compact('section'));
     }
 
     public function update(Request $request, Content $content)
