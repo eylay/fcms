@@ -38,6 +38,14 @@ body {
     text-decoration: none;
 }
 
+.add-row {
+    position: fixed;
+    padding: 15px 50px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
 
 /* are you sure box */
 #are-you-sure {

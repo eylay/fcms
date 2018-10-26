@@ -14,12 +14,13 @@ class ContentController extends Controller
         return view('contents.edit', compact('section'));
     }
 
-    public function update(Request $request, Content $content)
+    public function update(Request $request, Section $section)
     {
-        //
+        dd($request->all());
+        dd($section);
     }
 
-    public function destroy(Content $content)
+    public function destroy(Section $section)
     {
         //
     }
