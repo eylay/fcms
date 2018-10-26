@@ -3,5 +3,5 @@
         آیکون
         <a href="https://fontawesome.com/v4.7.0/icons/" class="mr-1" target="_blank"> مشاهده لیست آیکون ها </a>
     </label>
-    <input type="text" id="icon" name="icon[]" value="" class="form-control">
+    <input type="text" id="icon" name="icon[]" value="{{$content->icon}}" class="form-control">
 </div>

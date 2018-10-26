@@ -6,21 +6,23 @@
         @csrf
 
         <div id="clone-box">
-            <div class="clone-row">
-                <div class="row">
+            @foreach ($contents as $content)
+                <div class="clone-row">
+                    <div class="row">
 
-                    <div class="col-md-3 my-2">
-                        <label for="position"> ترتیب </label>
-                        <input type="number" name="position[]" class="form-control" value="" required>
+                        <div class="col-md-3 my-2">
+                            <label for="position"> ترتیب </label>
+                            <input type="number" name="position[]" class="form-control" value="{{$content->position}}" required>
+                        </div>
+
+                        @foreach ($section->inputs() as $input)
+                            @include("contents.partials.$input")
+                        @endforeach
+
                     </div>
-
-                    @foreach ($section->inputs() as $input)
-                        @include("contents.partials.$input")
-                    @endforeach
-
+                    <hr>
                 </div>
-                <hr>
-            </div>
+            @endforeach
         </div>
 
         <div class="add-row bg-dark">

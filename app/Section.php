@@ -8,6 +8,11 @@ class Section extends Model
 {
     protected $guarded = ['id'];
 
+    public function contents()
+    {
+        return $this->hasMany(Content::class)->orderBy('position');
+    }
+
     public function inputs()
     {
         switch ($this->type) {
