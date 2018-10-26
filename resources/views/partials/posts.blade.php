@@ -8,10 +8,6 @@
                     </div>
                     <div class="blog-content">
                         <h3><a href="#">Beautiful Place for your Great Journey</a></h3>
-                        <ul class="blog-meta">
-                            <li><span class="ti-user"></span> <a href="#">Admin</a></li>
-                            <li><span class="ti-calendar"></span> <a href="#">Feb 01, 2017</a></li>
-                        </ul>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit nemo eaque expedita aliquid dolorem repellat perferendis, facilis aut fugit, impedit.</p>
                     </div>
                 </div>
@@ -23,10 +19,6 @@
                     </div>
                     <div class="blog-content">
                         <h3><a href="#">Beautiful Place for your Great Journey</a></h3>
-                        <ul class="blog-meta">
-                            <li><span class="ti-user"></span> <a href="#">Admin</a></li>
-                            <li><span class="ti-calendar"></span> <a href="#">Feb 01, 2017</a></li>
-                        </ul>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit nemo eaque expedita aliquid dolorem repellat perferendis, facilis aut fugit, impedit.</p>
                     </div>
                 </div>
@@ -38,10 +30,6 @@
                     </div>
                     <div class="blog-content">
                         <h3><a href="#">Beautiful Place for your Great Journey</a></h3>
-                        <ul class="blog-meta">
-                            <li><span class="ti-user"></span> <a href="#">Admin</a></li>
-                            <li><span class="ti-calendar"></span> <a href="#">Feb 01, 2017</a></li>
-                        </ul>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit nemo eaque expedita aliquid dolorem repellat perferendis, facilis aut fugit, impedit.</p>
                     </div>
                 </div>

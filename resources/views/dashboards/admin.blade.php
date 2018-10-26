@@ -39,7 +39,7 @@
                         <i class="fa fa-pencil s-1-5x" title="ویرایش"></i>
                     </a>
                     <a href="#" class="mx-2 text-primary">
-                        <i class="fa fa-edit s-1-5x" title="ویرایش محتویات"></i>
+                        <i class="fa fa-edit s-1-5x" title="ویرایش محتوا"></i>
                     </a>
                     <a href="javascript:void" class="mx-2 text-danger danger-alert" data-target="section-{{$section->id}}">
                         <i class="fa fa-trash s-1-5x" title="حذف کردن"></i>
