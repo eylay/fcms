@@ -24,11 +24,6 @@ class ContentController extends Controller
         return back()->withMessage('اطلاعات وارد شده ثبت شد.');
     }
 
-    public function destroy(Section $section)
-    {
-        //
-    }
-
     public static function prepare($data, $section_id)
     {
         $result = [];

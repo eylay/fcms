@@ -30,10 +30,26 @@ $(document).ready(function () {
     });
 
 
-    // clone action
-    $('#cloner').click(function () {
-        var row = $('.clone-row').first();
-        row.clone().appendTo('#clone-box');
-    });
+});
 
+
+// clone action
+
+$(document).on('click', '#cloner', function () {
+    var row = $('.clone-row').first();
+    var count = $('.clone-row').length;
+    var cloned = row.clone();
+    cloned.find('input[type!=file], textarea').val('');
+    cloned.find('input#position').val(count+1);
+    cloned.appendTo('#clone-box');
+    $('.delete-clone-row').show();
+});
+
+$(document).on('click', '.delete-clone-row', function () {
+    var row = $(this).parents('.clone-row');
+    row.remove();
+    var count = $('.clone-row').length;
+    if (count == 1) {
+        $('.delete-clone-row').hide();
+    }
 });

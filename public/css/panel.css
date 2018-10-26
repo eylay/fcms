@@ -4,6 +4,10 @@ body {
     text-align: right;
 }
 
+.hidden {
+    display: none;
+}
+
 .bg-white {
     background-color: #fff;
 }
