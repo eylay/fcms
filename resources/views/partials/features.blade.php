@@ -9,60 +9,23 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-4">
-                <div class="box">
-                    <div class="box-icon">
-                        <img src="images/portfolio-icon-1.png" alt="">
+
+            @foreach ($section->contents as $content)
+                <div class="col-md-{{$content->cols ?? 3}}" style="float:right">
+                    <div class="box">
+                        <div class="box-icon">
+                            @if ($content->picture_path)
+                                <img src="{{asset($content->picture_path)}}" alt="{{$content->title}}">
+                            @else
+                                <i class="fa fa-{{$content->icon}} fa-4x"></i>
+                            @endif
+                        </div>
+                        <h3>{{$content->title}}</h3>
+                        <p>{{$content->description}}</p>
                     </div>
-                    <h3>Creative Design</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque quas nulla est adipisci,</p>
                 </div>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4">
-                <div class="box">
-                    <div class="box-icon">
-                        <img src="images/portfolio-icon-2.png" alt="">
-                    </div>
-                    <h3>Unlimited Features</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque quas nulla est adipisci,</p>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4">
-                <div class="box">
-                    <div class="box-icon">
-                        <img src="images/portfolio-icon-3.png" alt="">
-                    </div>
-                    <h3>Full Free Chat</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque quas nulla est adipisci,</p>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4">
-                <div class="box">
-                    <div class="box-icon">
-                        <img src="images/portfolio-icon-4.png" alt="">
-                    </div>
-                    <h3>Retina ready</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque quas nulla est adipisci,</p>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4">
-                <div class="box">
-                    <div class="box-icon">
-                        <img src="images/portfolio-icon-5.png" alt="">
-                    </div>
-                    <h3>High Resolution</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque quas nulla est adipisci,</p>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4">
-                <div class="box">
-                    <div class="box-icon">
-                        <img src="images/portfolio-icon-6.png" alt="">
-                    </div>
-                    <h3>Clean Codes</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque quas nulla est adipisci,</p>
-                </div>
-            </div>
+            @endforeach
+
         </div>
     </div>
 </section>

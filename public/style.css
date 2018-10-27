@@ -245,7 +245,6 @@ input:-webkit-autofill:focus {
 }
 
 .box .box-icon {
-    height: 160px;
     margin-bottom: 20px;
 }
 
@@ -254,6 +253,10 @@ input:-webkit-autofill:focus {
     filter: grayscale(100%);
     -webkit-transition: 0.3s;
     transition: 0.3s;
+}
+
+.box .box-icon i {
+    color: #138fc2;
 }
 
 .box:hover .box-icon img {
