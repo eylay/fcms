@@ -8,6 +8,11 @@ class Section extends Model
 {
     protected $guarded = ['id'];
 
+    public static function uploadable_contents()
+    {
+        return ['picture_path', 'picture1', 'picture2'];
+    }
+
     public function contents()
     {
         return $this->hasMany(Content::class)->orderBy('position');
