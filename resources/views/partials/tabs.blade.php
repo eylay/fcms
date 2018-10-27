@@ -4,121 +4,51 @@
             <div class="col-xs-12">
                 <div id="caption_slide" class="carousel slide caption-slider" data-ride="carousel">
                     <div class="carousel-inner" role="listbox">
-                        <div class="item active row">
-                            <div class="v-center">
-                                <div class="col-xs-12 col-md-6">
-                                    <div class="caption-title" data-animation="animated fadeInUp">
-                                        <h2>Easy to build</h2>
-                                    </div>
-                                    <div class="caption-desc" data-animation="animated fadeInUp">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute</p>
-                                    </div>
-                                    <div class="caption-button" data-animation="animated fadeInUp">
-                                        <a href="#" class="button">Read more</a>
-                                    </div>
-                                </div>
-                                <div class="col-xs-6 col-md-3">
-                                    <div class="caption-photo one" data-animation="animated fadeInRight">
-                                        <img src="images/screen-1.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="col-xs-6 col-md-3">
-                                    <div class="caption-photo two" data-animation="animated fadeInRight">
-                                        <img src="images/screen-2.jpg" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item row">
-                            <div class="v-center">
-                                <div class="col-xs-12 col-md-6">
-                                    <div class="caption-title" data-animation="animated fadeInUp">
-                                        <h2>Easy to use</h2>
-                                    </div>
-                                    <div class="caption-desc" data-animation="animated fadeInUp">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute</p>
-                                    </div>
-                                    <div class="caption-button" data-animation="animated fadeInUp">
-                                        <a href="#" class="button">Read more</a>
+
+                            @foreach ($section->contents as $key => $content)
+                                <div class="item row @if($key==0) active @endif">
+                                    <div class="v-center">
+                                        <div class="col-xs-12 col-md-6">
+                                            <div class="caption-title" data-animation="animated fadeInUp">
+                                                <h2>{{$content->title}}</h2>
+                                            </div>
+                                            <div class="caption-desc" data-animation="animated fadeInUp">
+                                                <p>{{$content->description}}</p>
+                                            </div>
+                                            @if ($content->link_name)
+                                                <div class="caption-button" data-animation="animated fadeInUp">
+                                                    <a href="{{$content->link_href}}" class="button">{{$content->link_name}}</a>
+                                                </div>
+                                            @endif
+                                        </div>
+                                        @if ($content->picture1)
+                                            <div class="col-xs-6 col-md-3">
+                                                <div class="caption-photo one" data-animation="animated fadeInRight">
+                                                    <img src="{{asset($content->picture1)}}">
+                                                </div>
+                                            </div>
+                                        @endif
+                                        @if ($content->picture2)
+                                            <div class="col-xs-6 col-md-3">
+                                                <div class="caption-photo two" data-animation="animated fadeInRight">
+                                                    <img src="{{asset($content->picture2)}}">
+                                                </div>
+                                            </div>
+                                        @endif
                                     </div>
                                 </div>
-                                <div class="col-xs-6 col-md-3">
-                                    <div class="caption-photo one" data-animation="animated fadeInRight">
-                                        <img src="images/screen-3.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="col-xs-6 col-md-3">
-                                    <div class="caption-photo two" data-animation="animated fadeInRight">
-                                        <img src="images/screen-4.jpg" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item row">
-                            <div class="v-center">
-                                <div class="col-xs-12 col-md-6">
-                                    <div class="caption-title" data-animation="animated fadeInUp">
-                                        <h2>Easy to customize</h2>
-                                    </div>
-                                    <div class="caption-desc" data-animation="animated fadeInUp">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute</p>
-                                    </div>
-                                    <div class="caption-button" data-animation="animated fadeInUp">
-                                        <a href="#" class="button">Read more</a>
-                                    </div>
-                                </div>
-                                <div class="col-xs-6 col-md-3">
-                                    <div class="caption-photo one" data-animation="animated fadeInRight">
-                                        <img src="images/screen-7.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="col-xs-6 col-md-3">
-                                    <div class="caption-photo two" data-animation="animated fadeInRight">
-                                        <img src="images/screen-2.jpg" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item row">
-                            <div class="v-center">
-                                <div class="col-xs-12 col-md-6">
-                                    <div class="caption-title" data-animation="animated fadeInUp">
-                                        <h2>Awesome design</h2>
-                                    </div>
-                                    <div class="caption-desc" data-animation="animated fadeInUp">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute</p>
-                                    </div>
-                                    <div class="caption-button" data-animation="animated fadeInUp">
-                                        <a href="#" class="button">Read more</a>
-                                    </div>
-                                </div>
-                                <div class="col-xs-6 col-md-3">
-                                    <div class="caption-photo one" data-animation="animated fadeInRight">
-                                        <img src="images/screen-3.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="col-xs-6 col-md-3">
-                                    <div class="caption-photo two" data-animation="animated fadeInRight">
-                                        <img src="images/screen-4.jpg" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                            @endforeach
+
                     </div>
                     <!-- Indicators -->
                     <ol class="carousel-indicators caption-indector">
-                        <li data-target="#caption_slide" data-slide-to="0" class="active">
-                            <strong>Lorem ipsum </strong>consectetur adipisicing elit.
-                        </li>
-                        <li data-target="#caption_slide" data-slide-to="1">
-                            <strong>Lorem ipsum </strong>consectetur adipisicing elit.
-                        </li>
-                        <li data-target="#caption_slide" data-slide-to="2">
-                            <strong>Lorem ipsum </strong>consectetur adipisicing elit.
-                        </li>
-                        <li data-target="#caption_slide" data-slide-to="3">
-                            <strong>Lorem ipsum </strong>consectetur adipisicing elit.
-                        </li>
+
+                        @foreach ($section->contents as $key => $content)
+                            <li data-target="#caption_slide" data-slide-to="{{$key}}" @if($key==0) class="active" @endif>
+                                <strong> {{$content->subtitle}} </strong>
+                            </li>
+                        @endforeach
+
                     </ol>
                 </div>
             </div>

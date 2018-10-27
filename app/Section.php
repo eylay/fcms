@@ -17,7 +17,7 @@ class Section extends Model
     {
         switch ($this->type) {
             case 'features': return ['title', 'icon', 'picture', 'cols', 'description']; break;
-            case 'tabs': return ['title', 'link_name', 'link_href', 'picture1', 'picture2', 'description']; break;
+            case 'tabs': return ['title', 'subtitle', 'link_name', 'link_href', 'picture1', 'picture2', 'description']; break;
             case 'prices': return ['title', 'link_name', 'link_href', 'icon', 'cols', 'description']; break;
             case 'cards': return ['title','subtitle','picture','cols']; break;
             case 'faq': return ['title', 'description']; break;
