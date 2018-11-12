@@ -8,6 +8,12 @@ use Illuminate\Http\Request;
 class SectionController extends Controller
 {
 
+    public function __construct()
+    {
+        $this->middleware('auth');
+        $this->middleware('admin');
+    }
+    
     public function create()
     {
         $section_types = ['features', 'tabs', 'prices', 'cards', 'faq', 'clients', 'posts'];
