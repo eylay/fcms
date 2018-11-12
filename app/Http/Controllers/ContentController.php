@@ -18,32 +18,41 @@ class ContentController extends Controller
     public function update(Request $request, Section $section)
     {
         $request->validate(['position'=>'required']);
-        $result = self::prepare($request->all(), $section->id);
+        $result = self::prepare($request->all(), $section);
         Content::where('section_id', $section->id)->delete();
         Content::insert($result);
         return back()->withMessage('اطلاعات وارد شده ثبت شد.');
     }
 
-    public static function prepare($data, $section_id)
+    public static function prepare($data, $section)
     {
+
+        // prepare necessary variables
         $result = [];
+        $contents = $section->contents;
         $count = count($data['position']);
         $uploadables = Section::uploadable_contents();
+
+        // loop through new data for uploading new files
+        for ($j=0; $j < $count ; $j++) {
+            foreach ($uploadables as $uploadable) {
+                $prev_file = isset($contents[$j]) ? $contents[$j]->$uploadable : null;
+                $result[$j][$uploadable] = isset($data[$uploadable][$j]) ? upload($data[$uploadable][$j], $prev_file) : $prev_file;
+            }
+        }
+
+        // prepare result array
         foreach ($data as $key => $array) {
             if (is_array($array)) {
                 foreach ($array as $i => $value) {
-                    if (in_array($key, $uploadables)) {
-                        // TODO: send prev file address for deleting prev file
-                        for ($j=0; $j < $count ; $j++) {
-                            $result[$j][$key] = isset($data[$key][$j]) ? upload($value) : null;
-                        }
-                    }else {
+                    if (!in_array($key, $uploadables)) {
                         $result[$i][$key] = $value;
                     }
-                    $result[$i]['section_id'] = $section_id;
+                    $result[$i]['section_id'] = $section->id;
                 }
             }
         }
+
         return $result;
     }
 }
