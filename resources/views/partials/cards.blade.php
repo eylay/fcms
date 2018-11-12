@@ -9,66 +9,25 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="single-team">
-                    <div class="team-photo">
-                        <img src="images/team-section-1.png" alt="">
+
+            @foreach ($section->contents as $content)
+                <div class="col-md-{{$content->cols}}">
+                    <div class="single-team">
+                        <div class="team-photo">
+                            <img src="{{asset($content->picture_path)}}" alt="{{$content->title}}">
+                        </div>
+                        <h4>{{$content->title}}</h4>
+                        <h6>{{$content->subtitle}}</h6>
+                        <ul class="social-menu">
+                            <li><a href="#"><i class="ti-facebook"></i></a></li>
+                            <li><a href="#"><i class="ti-twitter"></i></a></li>
+                            <li><a href="#"><i class="ti-linkedin"></i></a></li>
+                            <li><a href="#"><i class="ti-pinterest"></i></a></li>
+                        </ul>
                     </div>
-                    <h4>JEMY SEDONCE</h4>
-                    <h6>Co. Founder</h6>
-                    <ul class="social-menu">
-                        <li><a href="#"><i class="ti-facebook"></i></a></li>
-                        <li><a href="#"><i class="ti-twitter"></i></a></li>
-                        <li><a href="#"><i class="ti-linkedin"></i></a></li>
-                        <li><a href="#"><i class="ti-pinterest"></i></a></li>
-                    </ul>
                 </div>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="single-team">
-                    <div class="team-photo">
-                        <img src="images/team-section-2.png" alt="">
-                    </div>
-                    <h4>DEBORAH BROWN</h4>
-                    <h6>UX Designer</h6>
-                    <ul class="social-menu">
-                        <li><a href="#"><i class="ti-facebook"></i></a></li>
-                        <li><a href="#"><i class="ti-twitter"></i></a></li>
-                        <li><a href="#"><i class="ti-linkedin"></i></a></li>
-                        <li><a href="#"><i class="ti-pinterest"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="single-team">
-                    <div class="team-photo">
-                        <img src="images/team-section-3.png" alt="">
-                    </div>
-                    <h4>HARRY BANKS</h4>
-                    <h6>Founder</h6>
-                    <ul class="social-menu">
-                        <li><a href="#"><i class="ti-facebook"></i></a></li>
-                        <li><a href="#"><i class="ti-twitter"></i></a></li>
-                        <li><a href="#"><i class="ti-linkedin"></i></a></li>
-                        <li><a href="#"><i class="ti-pinterest"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="single-team">
-                    <div class="team-photo">
-                        <img src="images/team-section-4.png" alt="">
-                    </div>
-                    <h4>VICTORIA CLARK</h4>
-                    <h6>Creative Director</h6>
-                    <ul class="social-menu">
-                        <li><a href="#"><i class="ti-facebook"></i></a></li>
-                        <li><a href="#"><i class="ti-twitter"></i></a></li>
-                        <li><a href="#"><i class="ti-linkedin"></i></a></li>
-                        <li><a href="#"><i class="ti-pinterest"></i></a></li>
-                    </ul>
-                </div>
-            </div>
+            @endforeach
+
         </div>
     </div>
 </section>
