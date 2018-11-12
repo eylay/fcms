@@ -26,7 +26,7 @@ class Section extends Model
             case 'prices': return ['title', 'link_name', 'link_href', 'icon', 'cols', 'description']; break;
             case 'cards': return ['title','subtitle','picture','cols']; break;
             case 'faq': return ['title', 'description']; break;
-            case 'clients': return ['title', 'picture', 'cols']; break;
+            case 'clients': return ['title', 'picture']; break;
             case 'posts': return ['title', 'picture', 'cols', 'description']; break;
             default: return []; break;
         }
