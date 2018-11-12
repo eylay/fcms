@@ -22,6 +22,14 @@ class MenuController extends Controller
 
     public function update(Request $request)
     {
-        dd($request->all());
+        Item::truncate();
+        for ($i=0; $i < count($request->position) ; $i++) {
+            $data = [];
+            $data['position'] = $request->position[$i];
+            $data['name'] = $request->name[$i];
+            $data['icon'] = $request->icon[$i];
+            Item::create($data);
+        }
+        return back()->withMessage('منوی سایت ویرایش شد.');
     }
 }

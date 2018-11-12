@@ -14,14 +14,10 @@
         <!--Logo/-->
         <nav class="collapse navbar-collapse" id="primary-menu">
             <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a href="#home-page">Home</a></li>
-                <li><a href="#service-page">Service</a></li>
-                <li><a href="#feature-page">Features</a></li>
-                <li><a href="#price-page">Pricing</a></li>
-                <li><a href="#team-page">Team</a></li>
-                <li><a href="#faq-page">FAQ</a></li>
-                <li><a href="#blog-page">Blog</a></li>
-                <li><a href="#contact-page">Contact</a></li>
+                <li class="active"><a href="#home-page"> <i class="fa fa-home"></i> خانه </a></li>
+                @foreach ($menu_items as $item)
+                    <li><a href="#"> <i class="fa fa-{{$item->icon}}"></i> {{$item->name}} </a></li>
+                @endforeach
             </ul>
         </nav>
     </div>
