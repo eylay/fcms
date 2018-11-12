@@ -21,9 +21,17 @@
                     @endforeach
                 </select>
             </div>
-            <div class="col-md-3 my-2 ml-auto">
+            <div class="col-md-3 my-2">
                 <label for="position"> ترتیب </label>
                 <input type="number" name="position" id="position" value="{{ $section->id ? $section->position : $count+1}}" class="form-control" required>
+            </div>
+            <div class="col-md-3 my-2 ml-auto">
+                <label for="title"> عنوان </label>
+                <input type="text" name="title" id="title" value="{{$section->title}}" class="form-control">
+            </div>
+            <div class="col-md-12 my-2 ml-auto">
+                <label for="description"> توضیحات </label>
+                <textarea name="description" id="description" rows="3" class="form-control">{{$section->description}}</textarea>
             </div>
         </div>
 

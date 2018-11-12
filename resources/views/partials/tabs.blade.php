@@ -1,5 +1,6 @@
 <section class="angle-bg sky-bg section-padding">
     <div class="container">
+        @include('partials.section_title_and_description')
         <div class="row">
             <div class="col-xs-12">
                 <div id="caption_slide" class="carousel slide caption-slider" data-ride="carousel">

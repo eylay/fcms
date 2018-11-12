@@ -1,5 +1,8 @@
 <section class="section-padding gray-bg" id="blog-page">
     <div class="container">
+
+        @include('partials.section_title_and_description')
+        
         <div class="row">
 
             @foreach ($section->contents as $content)
