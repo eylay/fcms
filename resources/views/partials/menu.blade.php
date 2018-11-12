@@ -16,7 +16,7 @@
             <ul class="nav navbar-nav navbar-right">
                 <li class="active"><a href="#home-page"> <i class="fa fa-home"></i> خانه </a></li>
                 @foreach ($menu_items as $item)
-                    <li><a href="#"> <i class="fa fa-{{$item->icon}}"></i> {{$item->name}} </a></li>
+                    <li><a href="{{$item->link}}"> <i class="fa fa-{{$item->icon}}"></i> {{$item->name}} </a></li>
                 @endforeach
             </ul>
         </nav>
