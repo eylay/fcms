@@ -11,12 +11,11 @@
                         </div>
                         <h4>{{$content->title}}</h4>
                         <h6>{{$content->subtitle}}</h6>
-                        <ul class="social-menu">
-                            <li><a href="#"><i class="ti-facebook"></i></a></li>
-                            <li><a href="#"><i class="ti-twitter"></i></a></li>
-                            <li><a href="#"><i class="ti-linkedin"></i></a></li>
-                            <li><a href="#"><i class="ti-pinterest"></i></a></li>
-                        </ul>
+                        @if ($content->link_name)
+                            <div class="social-menu">
+                                <a href="{{$content->link_href}}" class="button">{{$content->link_name}}</a>
+                            </div>
+                        @endif
                     </div>
                 </div>
             @endforeach

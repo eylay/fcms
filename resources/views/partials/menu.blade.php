@@ -7,9 +7,6 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="#" class="navbar-brand logo">
-                <h2>colid</h2>
-            </a>
         </div>
         <!--Logo/-->
         <nav class="collapse navbar-collapse" id="primary-menu">
